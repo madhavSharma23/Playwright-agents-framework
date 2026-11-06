@@ -38,7 +38,7 @@ pipeline {
             }
             steps {
                 // Grant execution permissions and run your consolidated script
-                sh 'chmod +x script.sh'
+                sh 'chmod +x auto-heal.sh'
                 sh './auto-heal.sh'
             }
         }
