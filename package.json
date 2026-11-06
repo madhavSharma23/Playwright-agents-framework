@@ -8,7 +8,7 @@
     "test:headed": "npx playwright test --headed",
     "test:debug": "npx playwright test --debug",
     "test:report": "npx playwright show-report",
-    "regression" : "npx playwright test"
+    "regression" : "./auto-heal.sh"
   },
   "keywords": [],
   "author": "",
