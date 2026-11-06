@@ -72,6 +72,6 @@ test.describe('Account recovery', () => {
     await expect(page).toHaveURL(/#\/auth\/password-new/);
 
     await forgotPasswordPage.submit(credentials.reset.email, credentials.reset.password, credentials.reset.confirmPassword);
-    await expect(page.locator('body')).toContainText(/match|confirm|password/i);
+    await expect(page.locator('body')).toContainText(/password and confirm password must match/i);
   });
 });
