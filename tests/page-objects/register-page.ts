@@ -16,8 +16,8 @@ export class RegisterPage extends BasePage {
     this.lastNameInput = page.locator('input[placeholder="Last Name"]').first();
     this.emailInput = page.locator('input[type="email"][placeholder="email@example.com"]').first();
     this.phoneInput = page.locator('input[placeholder="enter your number"]').first();
-    this.passwordInput = page.locator('input[type="password"]').nth(6);
-    this.confirmPasswordInput = page.locator('input[type="password"]').nth(7);
+    this.passwordInput = page.locator('input[type="password"][formcontrolname="userPassword"]');
+    this.confirmPasswordInput = page.locator('input[type="password"][formcontrolname="confirmPassword"]');
     this.registerButton = page.locator('input[type="submit"][value="Register"]').first();
   }
 
