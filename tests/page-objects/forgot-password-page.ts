@@ -9,10 +9,10 @@ export class ForgotPasswordPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.emailInput = page.locator('email-malformed').first();
-    this.newPasswordInput = page.locator('input[type="password"][id="userPassword"], input[placeholder="Passsword"]').first();
-    this.confirmPasswordInput = page.locator('input[type="password"][id="confirmPassword"], input[placeholder="Confirm Passsword"]').first();
-    this.saveNewPasswordButton = page.locator('button[type="submit"], input[type="submit"][value="Save New Password"]').first();
+    this.emailInput = page.getByPlaceholder('Enter your email address');
+    this.newPasswordInput = page.locator('input#userPassword');
+    this.confirmPasswordInput = page.locator('input#confirmPassword');
+    this.saveNewPasswordButton = page.getByRole('button', { name: 'Save New Password' });
   }
 
   async open() {
